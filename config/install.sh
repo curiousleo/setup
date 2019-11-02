@@ -33,5 +33,9 @@ done
 ###############################################################################
 # Special configuration files
 
+# GNOME
+dconf load / < "${owndir}/gnome/dconf-settings.ini"
+
+# Zotero
 echo Run this manually once:
 echo ln -s "$(readlink -f "${owndir}/zotero/user.js")" "$(find "${HOME}/.zotero/zotero/" -type d -name '*.default')/user.js"
