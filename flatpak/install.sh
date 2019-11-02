@@ -12,8 +12,8 @@ IFS=$'\n\t'
 ###############################################################################
 # Flatpak
 
-flatpak remote-add --if-not-exists \
+flatpak --user remote-add --if-not-exists \
     flathub https://flathub.org/repo/flathub.flatpakrepo
-flatpak update
+flatpak --user --noninteractive update
 
-flatpak install flathub com.valvesoftware.Steam
+flatpak --user --noninteractive install flathub com.valvesoftware.Steam
