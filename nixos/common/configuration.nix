@@ -6,13 +6,11 @@
 
 let
   # all-hies = import (fetchTarball "https://github.com/infinisil/all-hies/tarball/master") {};
-in
-{
-  imports =
-    [ # Include the results of the hardware scan.
-      ./cachix.nix
-      # ./custom/lorri.nix
-    ];
+in {
+  imports = [ # Include the results of the hardware scan.
+    ./cachix.nix
+    # ./custom/lorri.nix
+  ];
 
   nixpkgs.config.allowUnfree = true;
 
@@ -46,8 +44,44 @@ in
     linuxPackages.perf
     (import ./custom/vim.nix)
     # (all-hies.selection { selector = p: { inherit (p) ghc843 ghc863 ghc864 ghc865; }; })
-    alacritty emacs firefox gnome3.gnome-boxes syncthing virtmanager zoom-us zotero
-    bat cabal2nix cabal-install cachix curl direnv dstat fd fzf git git-crypt gnumake htop imagemagick jq magic-wormhole nix-prefetch-git opam proselint python3 restic ripgrep rr socat stack stow tmux tree vis wget
+    alacritty
+    emacs
+    firefox
+    gnome3.gnome-boxes
+    syncthing
+    virtmanager
+    zoom-us
+    zotero
+    bat
+    cabal2nix
+    cabal-install
+    cachix
+    curl
+    direnv
+    dstat
+    fd
+    fzf
+    git
+    git-crypt
+    gnumake
+    htop
+    imagemagick
+    jq
+    magic-wormhole
+    nix-prefetch-git
+    opam
+    proselint
+    python3
+    restic
+    ripgrep
+    rr
+    socat
+    stack
+    stow
+    tmux
+    tree
+    vis
+    wget
   ];
 
   # Some programs need SUID wrappers, can be configured further or are

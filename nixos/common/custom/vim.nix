@@ -1,4 +1,4 @@
-with import <nixpkgs> {};
+with import <nixpkgs> { };
 
 let
   customPlugins = {
@@ -12,15 +12,14 @@ let
       }) + "/plugins/nvim";
     };
   };
-in
-  neovim.override {
-    vimAlias = true;
-    withPython = true;
-    configure = {
-      customRC = builtins.readFile ./vimrc;
-      packages.myNeovimPackage = with pkgs.vimPlugins // customPlugins; {
-        start = [ ghcid vim-nix ];
-        opt = [];
-      };
+in neovim.override {
+  vimAlias = true;
+  withPython = true;
+  configure = {
+    customRC = builtins.readFile ./vimrc;
+    packages.myNeovimPackage = with pkgs.vimPlugins // customPlugins; {
+      start = [ ghcid vim-nix ];
+      opt = [ ];
     };
-  }
+  };
+}
