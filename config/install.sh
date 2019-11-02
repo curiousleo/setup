@@ -31,11 +31,22 @@ do
 done
 
 ###############################################################################
-# Special configuration files
-
-# GNOME
-dconf load / < "${owndir}/gnome/dconf-settings.ini"
+# Other configuration
 
 # Zotero
-echo Run this manually once:
-echo ln -s "$(readlink -f "${owndir}/zotero/user.js")" "$(find "${HOME}/.zotero/zotero/" -type d -name '*.default')/user.js"
+# https://www.zotero.org/support/kb/profile_directory
+# https://stackoverflow.com/a/54561526/3507119
+readarray -d '' zotero_default_profiles < \
+    <(find "${HOME}/.zotero/zotero/" -type d -name '*.default' -print0)
+if [ ${#zotero_default_profiles[@]} -eq 1 ]; then
+    stow --dir="${owndir}" --target="${zotero_default_profiles[0]}" "zotero"
+else
+    echo "FAIL: could not find Zotero default profile folder"
+    exit 1
+fi
+
+# GNOME
+# Use `dconf dump /` to view configuration as a settings file.
+# NixOS does not support GNOME settings well via Nix configuration. Tracking
+# issue: https://github.com/NixOS/nixpkgs/issues/54150
+dconf load / < "${owndir}/gnome/dconf-settings.ini"
