@@ -1,5 +1,12 @@
 # Configuration files
 
+## Local Git configuration
+
+```console
+$ git config -f ~/.gitconfig.local user.email 'curiousleo@users.noreply.github.com'
+$ git config -f ~/.gitconfig.local user.name 'Leonhard Markert'
+```
+
 ## Install configuration files
 
 ```console

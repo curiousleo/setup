@@ -23,7 +23,7 @@ in
   boot.loader.systemd-boot.enable = true;
   boot.loader.efi.canTouchEfiVariables = true;
 
-  # networking.wireless.enable = true;  # Enables wireless support via wpa_supplicant.
+  # Enable NetworkManager.
   networking.networkmanager.enable = true;
 
   # Configure network proxy if necessary
@@ -82,7 +82,7 @@ in
   sound.enable = true;
   hardware.pulseaudio.enable = true;
   hardware.pulseaudio.package = pkgs.pulseaudioFull; # required for bluetooth
-  hardware.pulseaudio.extraModules = [pkgs.pulseaudio-modules-bt ];
+  hardware.pulseaudio.extraModules = [ pkgs.pulseaudio-modules-bt ];
 
   # Enable U2F (for YubiKey).
   hardware.u2f.enable = true;
@@ -124,19 +124,9 @@ in
   virtualisation.virtualbox.host.enable = true;
   virtualisation.virtualbox.host.enableExtensionPack = true;
 
-  # Define a user account. Don't forget to set a password with ‘passwd’.
-  users.users.leo = {
-    isNormalUser = true;
-    uid = 1000;
-    hashedPassword = "$6$94Wu55R5Q43jD9pr$0irVyqzunfaQaZKDTb21P9sQggNkQhpkaJ/QsoKVKuno3MnzFmN5XbBiHUCEAQhUdvTnusBEY/1LINNImyc860";
-    description = "Leonhard Markert";
-    extraGroups = [ "wheel" "networkmanager" "docker" "libvirtd" "vboxusers" ];
-  };
-
   # This value determines the NixOS release with which your system is to be
   # compatible, in order to avoid breaking some software such as database
   # servers. You should change this only after NixOS release notes say you
   # should.
-  system.stateVersion = "19.03"; # Did you read the comment?
-
+  system.stateVersion = "19.09"; # Did you read the comment?
 }
