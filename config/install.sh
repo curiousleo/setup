@@ -46,7 +46,8 @@ else
 fi
 
 # GNOME
-# Use `dconf dump /` to view configuration as a settings file.
+# - `dconf watch /` shows changes as they happen
+# - `dconf dump /` prints all configuration as a settings file
 # NixOS does not support GNOME settings well via Nix configuration. Tracking
 # issue: https://github.com/NixOS/nixpkgs/issues/54150
 dconf load / < "${owndir}/gnome/dconf-settings.ini"
