@@ -23,6 +23,7 @@ declare -a configs=(
 	i3status
 	python
 	vim
+	vis
 )
 
 for config in "${configs[@]}"; do
