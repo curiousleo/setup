@@ -1,5 +1,7 @@
 # setup
 
+[NixOS installation.](https://gist.github.com/curiousleo/b06e65a6e6ce94b8778906b96c922377)
+
 [Generate a new SSH key:](https://help.github.com/en/github/authenticating-to-github/generating-a-new-ssh-key-and-adding-it-to-the-ssh-agent#generating-a-new-ssh-key)
 
 ```console
