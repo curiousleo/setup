@@ -44,6 +44,7 @@ in {
     linuxPackages.perf
     (import ./custom/vim.nix)
     # (all-hies.selection { selector = p: { inherit (p) ghc843 ghc863 ghc864 ghc865; }; })
+    # graphical programs
     alacritty
     emacs
     firefox
@@ -52,9 +53,10 @@ in {
     virtmanager
     zoom-us
     zotero
+    # command line programs
     bat
-    cabal2nix
     cabal-install
+    cabal2nix
     cachix
     curl
     direnv
