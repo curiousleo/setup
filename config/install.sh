@@ -34,6 +34,7 @@ done
 
 # Zotero
 # https://www.zotero.org/support/kb/profile_directory
+# https://developer.mozilla.org/en-US/docs/Mozilla/Preferences/A_brief_guide_to_Mozilla_preferences#Preferences_files
 # https://stackoverflow.com/a/54561526/3507119
 readarray -d '' zotero_default_profiles < <(
 	find "${HOME}/.zotero/zotero/" -type d -name '*.default' -print0
