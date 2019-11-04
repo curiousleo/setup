@@ -3,9 +3,7 @@
 
 EDITOR=vim
 
-# Use 'dotfiles' to manage dotfiles git repository
-alias dotfiles='git --git-dir=$HOME/.dotfiles/ --work-tree=$HOME'
-alias fabric_pid=jps | grep GameLauncher | cut -d' ' -f1
+# Colourful `ls` by default
 alias ls='ls --color=auto'
 
 # Activate direnv
