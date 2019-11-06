@@ -22,6 +22,7 @@ declare -a configs=(
 	i3
 	i3status
 	python
+	vale
 	vim
 	vis
 )

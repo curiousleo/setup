@@ -91,6 +91,7 @@ in {
     stow
     tmux
     tree
+    vale
     vis
     wget
   ];
