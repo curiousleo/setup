@@ -37,11 +37,21 @@ elif [ -f /usr/lib/git-core/git-sh-prompt ]; then
 fi
 
 if [ $(declare -f __git_ps1 > /dev/null ; echo $?) ]; then
-  PS1='[\u@\h \W$(__git_ps1 " (%s)")]\$ '
+  PROMPT='[\u@\h \W$(__git_ps1 " (%s)")]\$ '
 else
-  PS1='[\u@\h \W]\$ '
+  PROMPT='[\u@\h \W]\$ '
 fi
 
-PROMPT_COMMAND='echo -ne "\033]0;${USER}@${HOSTNAME}: ${PWD}\007"'
+# Restore after nix-shell
+# See https://github.com/NixOS/nix/issues/1268#issuecomment-449661822
+function restore_prompt_after_nix_shell() {
+  if [ "$PS1" != "$PROMPT" ]; then
+    PS1=$PROMPT
+    PROMPT_COMMAND='echo -ne "\033]0;${USER}@${HOSTNAME}: ${PWD}\007"'
+  fi
+}
+
+PROMPT_COMMAND=restore_prompt_after_nix_shell
+export PS1=$PROMPT
 
 PATH="${HOME}/.local/bin/:${PATH}"
