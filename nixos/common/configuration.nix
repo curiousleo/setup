@@ -155,6 +155,8 @@ in {
     #'';
   };
 
+  nix.trustedUsers = [ "@wheel" ];
+
   #systemd.services.haskell-language-server = {
   #  enable = true;
   #  description = "Haskell Language Server";
