@@ -8,9 +8,9 @@
 
   boot.initrd.availableKernelModules =
     [ "xhci_pci" "nvme" "usb_storage" "sd_mod" "rtsx_pci_sdmmc" ];
-  boot.initrd.kernelModules = [ ];
+  boot.initrd.kernelModules = [];
   boot.kernelModules = [ "kvm-intel" ];
-  boot.extraModulePackages = [ ];
+  boot.extraModulePackages = [];
 
   fileSystems."/" = {
     device = "/dev/disk/by-uuid/62c1b7c3-8a37-4631-8f63-4ed10300473e";
@@ -38,7 +38,7 @@
   };
 
   swapDevices =
-    [{ device = "/dev/disk/by-uuid/cf437b23-7b01-4ba5-9ac9-08e2a0763dce"; }];
+    [ { device = "/dev/disk/by-uuid/cf437b23-7b01-4ba5-9ac9-08e2a0763dce"; } ];
 
   nix.maxJobs = lib.mkDefault 8;
   powerManagement.cpuFreqGovernor = lib.mkDefault "powersave";

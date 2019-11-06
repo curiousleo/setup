@@ -3,10 +3,11 @@
 let
   lorri = import
     (fetchTarball "https://github.com/target/lorri/tarball/rolling-release")
-    { };
+    {};
   socketUnit = "lorri";
   socketPath = "lorri/daemon.socket";
-in {
+in
+{
   config = {
     systemd.user.sockets.${socketUnit} = {
       description = "Socket for Lorri Daemon";

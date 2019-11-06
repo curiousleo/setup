@@ -6,8 +6,10 @@
 
 let
   # all-hies = import (fetchTarball "https://github.com/infinisil/all-hies/tarball/master") {};
-in {
-  imports = [ # Include the results of the hardware scan.
+in
+{
+  imports = [
+    # Include the results of the hardware scan.
     ./cachix.nix
     # ./custom/lorri.nix
   ];
