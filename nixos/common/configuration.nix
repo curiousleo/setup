@@ -80,6 +80,7 @@ in {
     #lorri
     magic-wormhole
     nix-prefetch-git
+    #nuspell
     opam
     proselint
     python3
