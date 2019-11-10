@@ -72,6 +72,7 @@ in
     git
     git-crypt
     gnumake
+    gnupg
     htop
     hunspell
     hunspellDicts.de-de
