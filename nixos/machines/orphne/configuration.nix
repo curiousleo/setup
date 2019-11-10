@@ -25,4 +25,13 @@
     extraGroups = [ "wheel" "networkmanager" ]; # Enable ‘sudo’ for the user.
   };
 
+  services.restic.backups = {
+    trail = {
+      initialize = true;
+      paths = [ "/home/leo/Trail" ];
+      repository = "s3:https://s3.eu-central-1.wasabisys.com/leo-orphne-restic/trail";
+      passwordFile = builtins.toString ../../../secret/orphne-restic-trail-password;
+      s3CredentialsFile = builtins.toString ../../../secret/orphne-restic-trail-credentials;
+    };
+  };
 }
