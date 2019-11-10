@@ -19,7 +19,7 @@ declare -a configs=(
 	alacritty
 	bash
 	git
-	gpg
+	gnupg
 	i3
 	i3status
 	python
