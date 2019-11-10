@@ -51,6 +51,7 @@ in
     # (all-hies.selection { selector = p: { inherit (p) ghc843 ghc863 ghc864 ghc865; }; })
     # graphical programs
     alacritty
+    chromium
     emacs
     firefox
     gnome3.gnome-boxes
