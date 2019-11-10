@@ -93,6 +93,7 @@ in
     socat
     stack
     stow
+    tig
     tmux
     tree
     vale
