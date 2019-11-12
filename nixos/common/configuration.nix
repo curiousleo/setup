@@ -127,6 +127,9 @@ in
   # Install DBus packages required for GNOME. See https://nixos.wiki/wiki/Gnome
   services.dbus.packages = with pkgs; [ gnome3.dconf gnome2.GConf ];
 
+  # Enable PowerTop.
+  powerManagement.powertop.enable = true;
+
   # Enable Bluetooth.
   hardware.bluetooth.enable = true;
 
