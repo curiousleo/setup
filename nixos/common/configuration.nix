@@ -127,6 +127,10 @@ in
   # Install DBus packages required for GNOME. See https://nixos.wiki/wiki/Gnome
   services.dbus.packages = with pkgs; [ gnome3.dconf gnome2.GConf ];
 
+  # Firmware update DBus service
+  # Run fwupdmgr refresh && fwupdmgr get-updates && fwupdmgr update every now and then!
+  services.fwupd.enable = true;
+
   # Enable PowerTop.
   powerManagement.powertop.enable = true;
 
@@ -141,6 +145,11 @@ in
 
   # Enable U2F (for YubiKey).
   hardware.u2f.enable = true;
+
+  # Enable Intel microcode updates
+  # TODO: this should probably go into a "common hardware configuration for
+  # Intel machines" file
+  hardware.cpu.intel.updateMicrocode = true;
 
   services.xserver = {
     enable = true;
