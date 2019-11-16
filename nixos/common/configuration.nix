@@ -67,6 +67,7 @@ in
     curl
     direnv
     dstat
+    entr
     fd
     fzf
     git
