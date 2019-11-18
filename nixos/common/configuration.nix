@@ -11,7 +11,6 @@ in
   imports = [
     # Include the results of the hardware scan.
     ./cachix.nix
-    # ./custom/lorri.nix
   ];
 
   nixpkgs.config.allowUnfree = true;
@@ -81,7 +80,6 @@ in
     hunspellDicts.fr-moderne
     imagemagick
     jq
-    #lorri
     magic-wormhole
     nix-prefetch-git
     #nuspell
@@ -123,7 +121,9 @@ in
 
   # Enable CUPS to print documents.
   services.printing.enable = true;
-  #services.lorri.enable = true;
+
+  # Use lorri (nix-shell replacement daemon).
+  services.lorri.enable = true;
 
   # Install DBus packages required for GNOME. See https://nixos.wiki/wiki/Gnome
   services.dbus.packages = with pkgs; [ gnome3.dconf gnome2.GConf ];
