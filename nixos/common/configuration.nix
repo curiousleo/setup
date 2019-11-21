@@ -71,7 +71,8 @@ in
     fd
     fzf
     git
-    git-crypt
+    gitAndTools.git-crypt
+    gitAndTools.git-imerge
     gnumake
     gnupg
     htop
