@@ -69,6 +69,7 @@ in
     dstat
     entr
     fd
+    file
     fzf
     git
     gitAndTools.git-crypt
@@ -107,6 +108,7 @@ in
   # started in user sessions.
   # programs.mtr.enable = true;
   # programs.gnupg.agent = { enable = true; enableSSHSupport = true; };
+  programs.sysdig.enable = true;
 
   # List services that you want to enable:
 
@@ -134,6 +136,9 @@ in
   # Firmware update DBus service
   # Run fwupdmgr refresh && fwupdmgr get-updates && fwupdmgr update every now and then!
   services.fwupd.enable = true;
+
+  # Enable TeamViewer.
+  services.teamviewer.enable = true;
 
   # Enable PowerTop.
   powerManagement.powertop.enable = true;
