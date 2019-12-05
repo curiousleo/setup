@@ -17,3 +17,6 @@ set undodir=~/.vim/undo
 set undofile
 
 set title
+
+" https://stackoverflow.com/a/6853779/3507119
+"set switchbuf+=usetab,newtab
