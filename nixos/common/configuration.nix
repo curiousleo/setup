@@ -74,6 +74,7 @@ in
     git
     gitAndTools.git-crypt
     gitAndTools.git-imerge
+    git-lfs
     gnumake
     gnupg
     htop
