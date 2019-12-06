@@ -53,6 +53,7 @@ in
     chromium
     emacs
     firefox
+    gimp
     gnome3.gnome-boxes
     syncthing
     transmission-gtk
