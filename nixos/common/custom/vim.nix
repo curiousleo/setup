@@ -21,7 +21,7 @@ neovim.override {
   configure = {
     customRC = builtins.readFile ./vimrc;
     packages.myNeovimPackage = with pkgs.vimPlugins // customPlugins; {
-      start = [ ghcid vim-nix ];
+      start = [ ghcid vim-nix vim-lsc ];
       opt = [];
     };
   };

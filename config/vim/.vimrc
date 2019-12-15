@@ -20,3 +20,7 @@ set title
 
 " https://stackoverflow.com/a/6853779/3507119
 "set switchbuf+=usetab,newtab
+
+" vim-lsc
+let g:lsc_auto_map = v:true
+let g:lsc_server_commands = { 'rust': 'racer' }
