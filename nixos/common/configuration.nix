@@ -55,6 +55,7 @@ in
     firefox
     gimp
     gnome3.gnome-boxes
+    libreoffice
     syncthing
     transmission-gtk
     virtmanager
