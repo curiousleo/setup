@@ -56,6 +56,7 @@ in
     gimp
     gnome3.gnome-boxes
     libreoffice
+    meld
     syncthing
     transmission-gtk
     virtmanager
