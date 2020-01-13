@@ -4,6 +4,7 @@
 [[ -f ~/.bash_profile ]] && . ~/.bash_profile
 
 EDITOR=vim
+VIEWER=bat
 
 # Colourful `ls` by default
 alias ls='ls --color=auto'

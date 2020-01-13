@@ -33,7 +33,7 @@ execution = "$EDITOR {directory}/{subpath}"
 [[verbs]]
 name = "view"
 invocation = "view"
-execution = "less {file}"
+execution = "$VIEWER {file}"
 
 #####################
 # Skin
