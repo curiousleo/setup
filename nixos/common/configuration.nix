@@ -64,6 +64,7 @@ in
     zotero
     # command line programs
     bat
+    broot
     cabal-install
     cabal2nix
     cachix

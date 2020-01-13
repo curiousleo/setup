@@ -57,3 +57,5 @@ PROMPT_COMMAND=restore_prompt_after_nix_shell
 export PS1=$PROMPT
 
 PATH="${HOME}/.local/bin/:${PATH}"
+
+source /home/leo/.config/broot/launcher/bash/br

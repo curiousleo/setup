@@ -18,6 +18,7 @@ owndir="$(readlink -f "$(dirname "${BASH_SOURCE[0]}")")"
 declare -a configs=(
 	alacritty
 	bash
+	broot
 	git
 	gnupg
 	i3
