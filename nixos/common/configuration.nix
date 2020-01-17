@@ -185,6 +185,7 @@ in
     #'';
   };
 
+  nix.extraOptions = "keep-outputs = true";
   nix.trustedUsers = [ "@wheel" ];
 
   #systemd.services.haskell-language-server = {
