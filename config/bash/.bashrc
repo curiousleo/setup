@@ -50,12 +50,12 @@ fi
 function restore_prompt_after_nix_shell() {
   if [ "$PS1" != "$PROMPT" ]; then
     PS1=$PROMPT
-    PROMPT_COMMAND='echo -ne "\033]0;${USER}@${HOSTNAME}: ${PWD}\007"'
+    PROMPT_COMMAND=""
   fi
 }
 
-PROMPT_COMMAND=restore_prompt_after_nix_shell
-export PS1=$PROMPT
+#PROMPT_COMMAND=restore_prompt_after_nix_shell
+export PS1="$PROMPT"
 
 PATH="${HOME}/.local/bin/:${PATH}"
 
