@@ -4,12 +4,8 @@
 
 { config, pkgs, ... }:
 
-let
-  # all-hies = import (fetchTarball "https://github.com/infinisil/all-hies/tarball/master") {};
-in
 {
   imports = [
-    # Include the results of the hardware scan.
     ./cachix.nix
   ];
 
@@ -100,6 +96,7 @@ in
     rr
     socat
     stack
+    starship
     stow
     tig
     tmux
