@@ -59,4 +59,4 @@ export PS1="$PROMPT"
 
 PATH="${HOME}/.local/bin/:${PATH}"
 
-source /home/leo/.config/broot/launcher/bash/br
+source "${HOME}/.config/broot/launcher/bash/br"
