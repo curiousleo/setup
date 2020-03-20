@@ -16,5 +16,5 @@ $ sudo ln -s $(readlink -f machines/${HOSTNAME}/configuration.nix) /etc/nixos/co
 ```console
 $ sudo nix-channel --list # if this shows no channels, add one:
 $ sudo nix-channel --add https://nixos.org/channels/nixos-19.09 nixos
-$ sudo nix-rebuild switch --upgrade
+$ sudo nixos-rebuild switch --upgrade
 ```
