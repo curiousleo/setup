@@ -15,6 +15,7 @@
   networking.useDHCP = false;
   networking.interfaces.wlp2s0.useDHCP = true;
 
+  users.mutableUsers = false;
   users.users.leo = {
     isNormalUser = true;
     uid = 1000;

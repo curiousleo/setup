@@ -3,43 +3,59 @@
 # to /etc/nixos/configuration.nix instead.
 { config, lib, pkgs, ... }:
 
+let
+  uuids = {
+    boot = "F1EA-B0D9";
+    cryptkey = "a05482e7-30a9-41d0-bd9d-6444b69fe7c6";
+    cryptrootEncrypted = "958e1c02-4e17-4353-a870-2efc8ff39b46";
+    cryptrootDecrypted = "cac51875-fd84-4c0b-84ee-2ea4ba424569";
+    cryptswapEncrypted = "390f1dc2-c6f8-4403-ae05-f758fc13d630";
+    cryptswapDecrypted = "a95418c3-d52f-4dc6-b98c-3e4b72e181b4";
+  };
+in
 {
   imports = [ <nixpkgs/nixos/modules/installer/scan/not-detected.nix> ];
 
   boot.initrd.availableKernelModules =
-    [ "xhci_pci" "nvme" "usb_storage" "sd_mod" "rtsx_pci_sdmmc" ];
+    [ "xhci_pci" "nvme" "ehci_pci" "ahci" "usb_storage" "sd_mod" "rtsx_pci_sdmmc" ];
   boot.initrd.kernelModules = [];
   boot.kernelModules = [ "kvm-intel" ];
   boot.extraModulePackages = [];
 
-  fileSystems."/" = {
-    device = "/dev/disk/by-uuid/62c1b7c3-8a37-4631-8f63-4ed10300473e";
-    fsType = "ext4";
-  };
-
-  #boot.initrd.luks.devices."cryptroot".device = "/dev/disk/by-uuid/32b1a8ab-6bd4-427b-9a66-38da01a95bd4";
   boot.initrd.luks.devices = {
     cryptkey = {
-      device = "/dev/disk/by-uuid/9af91083-0e16-43d2-87aa-a1e0c110cdb5";
+      device = "/dev/disk/by-uuid/${uuids.cryptkey}";
     };
+
     cryptroot = {
-      device = "/dev/disk/by-uuid/32b1a8ab-6bd4-427b-9a66-38da01a95bd4";
+      device = "/dev/disk/by-uuid/${uuids.cryptrootEncrypted}";
       keyFile = "/dev/mapper/cryptkey";
     };
+
     cryptswap = {
-      device = "/dev/disk/by-uuid/bbfd5daa-532b-4302-b8df-1857ea525bb7";
+      device = "/dev/disk/by-uuid/${uuids.cryptswapEncrypted}";
       keyFile = "/dev/mapper/cryptkey";
     };
   };
 
-  fileSystems."/boot" = {
-    device = "/dev/disk/by-uuid/E3FE-73B7";
-    fsType = "vfat";
-  };
+  fileSystems."/" =
+    {
+      device = "/dev/disk/by-uuid/${uuids.cryptrootDecrypted}";
+      fsType = "ext4";
+    };
+
+  fileSystems."/boot" =
+    {
+      device = "/dev/disk/by-uuid/${uuids.boot}";
+      fsType = "vfat";
+    };
 
   swapDevices =
-    [ { device = "/dev/disk/by-uuid/cf437b23-7b01-4ba5-9ac9-08e2a0763dce"; } ];
+    [ { device = "/dev/disk/by-uuid/${uuids.cryptswapDecrypted}"; } ];
 
-  nix.maxJobs = lib.mkDefault 8;
+  nix.maxJobs = lib.mkDefault 4;
   powerManagement.cpuFreqGovernor = lib.mkDefault "powersave";
+  # High-DPI console
+  i18n.consoleFont =
+    lib.mkDefault "${pkgs.terminus_font}/share/consolefonts/ter-u28n.psf.gz";
 }
