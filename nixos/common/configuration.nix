@@ -51,12 +51,12 @@
     firefox
     gimp
     gnome3.gnome-boxes
+    gnome3.gnome-tweak-tool
     libreoffice
     meld
     syncthing
     transmission-gtk
     virtmanager
-    zoom-us
     zotero
     # command line programs
     bat
