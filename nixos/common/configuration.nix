@@ -111,6 +111,7 @@
   # programs.mtr.enable = true;
   # programs.gnupg.agent = { enable = true; enableSSHSupport = true; };
   programs.sysdig.enable = true;
+  programs.wireshark.enable = true;
 
   # List services that you want to enable:
 
