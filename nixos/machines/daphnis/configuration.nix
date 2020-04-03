@@ -24,4 +24,19 @@
     description = "Leonhard Markert";
     extraGroups = [ "wheel" "networkmanager" "docker" "libvirtd" "vboxusers" ];
   };
+
+  nix.buildMachines = [
+    {
+      hostName = "build01.tweag.io";
+      maxJobs = 24;
+      sshUser = "nix";
+      sshKey = "/root/.ssh/id-tweag-builder";
+      system = "x86_64-linux";
+      supportedFeatures = [ "benchmark" "big-parallel" "kvm" ];
+    }
+  ];
+
+  nix.extraOptions = ''
+    builders-use-substitutes = true
+  '';
 }
