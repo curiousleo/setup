@@ -54,6 +54,7 @@
     gnome3.gnome-tweak-tool
     libreoffice
     meld
+    mumble
     syncthing
     transmission-gtk
     virtmanager
