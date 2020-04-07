@@ -41,6 +41,7 @@
   # List packages installed in system profile. To search, run:
   # $ nix search wget
   environment.systemPackages = with pkgs; [
+    linuxPackages.cpupower
     linuxPackages.perf
     (import ./custom/vim.nix)
     # (all-hies.selection { selector = p: { inherit (p) ghc843 ghc863 ghc864 ghc865; }; })
