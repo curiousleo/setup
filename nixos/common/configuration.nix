@@ -77,11 +77,12 @@
     file
     fzf
     git
+    git-lfs
     gitAndTools.git-crypt
     gitAndTools.git-imerge
-    git-lfs
     gnumake
     gnupg
+    graphviz
     htop
     hunspell
     hunspellDicts.de-de
@@ -108,6 +109,7 @@
     tree
     vale
     vis
+    watson
     wget
   ];
 
