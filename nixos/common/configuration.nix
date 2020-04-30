@@ -94,6 +94,7 @@
     magic-wormhole
     nix-prefetch-git
     #nuspell
+    ocrmypdf
     opam
     proselint
     python3
