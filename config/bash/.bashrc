@@ -60,3 +60,4 @@ export PS1="$PROMPT"
 PATH="${HOME}/.local/bin/:${PATH}"
 
 source "${HOME}/.config/broot/launcher/bash/br"
+eval "$(zoxide init bash)"

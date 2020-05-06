@@ -3,7 +3,9 @@
 # and in the NixOS manual (accessible by running ‘nixos-help’).
 
 { config, pkgs, ... }:
-
+let
+  masterPkgs = import ./custom/master.nix;
+in
 {
   imports = [
     ./cachix.nix
@@ -64,6 +66,7 @@
     virtmanager
     zotero
     # command line programs
+    masterPkgs.zoxide
     bat
     broot
     cabal-install
