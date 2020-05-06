@@ -59,6 +59,8 @@ export PS1="$PROMPT"
 
 PATH="${HOME}/.local/bin/:${PATH}"
 
+export FZF_DEFAULT_COMMAND='fd --hidden --type f'
+
 source "${HOME}/.config/broot/launcher/bash/br"
 eval "$(zoxide init bash)"
 eval "$(starship init bash)"
