@@ -61,3 +61,4 @@ PATH="${HOME}/.local/bin/:${PATH}"
 
 source "${HOME}/.config/broot/launcher/bash/br"
 eval "$(zoxide init bash)"
+eval "$(starship init bash)"
