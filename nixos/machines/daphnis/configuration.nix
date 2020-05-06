@@ -22,7 +22,7 @@
     hashedPassword =
       "$6$94Wu55R5Q43jD9pr$0irVyqzunfaQaZKDTb21P9sQggNkQhpkaJ/QsoKVKuno3MnzFmN5XbBiHUCEAQhUdvTnusBEY/1LINNImyc860";
     description = "Leonhard Markert";
-    extraGroups = [ "wheel" "networkmanager" "docker" "libvirtd" "vboxusers" ];
+    extraGroups = [ "wheel" "networkmanager" "docker" "libvirtd" "vboxusers" "wireshark" ];
   };
 
   nix.buildMachines = [

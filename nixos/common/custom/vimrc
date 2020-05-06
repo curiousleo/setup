@@ -22,11 +22,8 @@ if executable('rg')
   set grepprg=rg\ --vimgrep
 endif
 
-nnoremap K :vimgrep! "<C-R><C-W>" **/*<CR>
-"nnoremap K :grep! "<C-R><C-W>"<CR>
+let mapleader = ","
 
-" Plugin configuration for https://github.com/natebosch/vim-lsc
-let g:lsc_auto_map = v:true
-let g:lsc_server_commands = {
-  \ 'haskell': 'hie',
-\}
+"nnoremap K :vimgrep! "<C-R><C-W>" **/*<CR>
+"nnoremap K :grep! "<C-R><C-W>"<CR>
+nnoremap <Leader>f :FZF<CR>
