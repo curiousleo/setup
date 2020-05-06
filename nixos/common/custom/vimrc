@@ -26,4 +26,5 @@ let mapleader = ","
 
 "nnoremap K :vimgrep! "<C-R><C-W>" **/*<CR>
 "nnoremap K :grep! "<C-R><C-W>"<CR>
-nnoremap <Leader>f :FZF<CR>
+nnoremap <C-P> :FZF<CR>
+nnoremap <Leader>h :nohlsearch<CR>
