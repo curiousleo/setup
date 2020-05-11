@@ -47,7 +47,7 @@ disabled = true
 disabled = true
 
 [haskell]
-disabled = false
+disabled = true # too slow!
 
 [java]
 disabled = true
