@@ -45,6 +45,6 @@
   nix.maxJobs = lib.mkDefault 4;
   powerManagement.cpuFreqGovernor = lib.mkDefault "powersave";
   # High-DPI console
-  i18n.consoleFont =
+  console.font =
     lib.mkDefault "${pkgs.terminus_font}/share/consolefonts/ter-u28n.psf.gz";
 }

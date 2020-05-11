@@ -2,7 +2,7 @@
 # your system.  Help is available in the configuration.nix(5) man page
 # and in the NixOS manual (accessible by running ‘nixos-help’).
 
-{ config, pkgs, ... }:
+{ config, lib, pkgs, ... }:
 let
   masterPkgs = import ./custom/master.nix;
 in
@@ -35,10 +35,12 @@ in
   # networking.proxy.noProxy = "127.0.0.1,localhost,internal.domain";
 
   # Select internationalisation properties.
-  i18n = {
-    consoleFont = "latarcyrheb-sun32";
-    consoleKeyMap = "us";
-    defaultLocale = "en_US.UTF-8";
+  i18n.defaultLocale = "en_US.UTF-8";
+
+  # Console settings.
+  console = {
+    font = lib.mkDefault "${pkgs.terminus_font}/share/consolefonts/ter-u28n.psf.gz";
+    keyMap = "us";
   };
 
   # Set your time zone.
