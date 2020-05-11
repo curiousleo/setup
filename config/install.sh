@@ -24,8 +24,8 @@ declare -a configs=(
 	i3
 	i3status
 	python
+	starship
 	vale
-	vim
 	vis
 )
 
