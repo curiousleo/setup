@@ -1,11 +1,29 @@
-set nocompatible              " be iMproved, required
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+" Basics
+
+set nocompatible
 filetype plugin on
-syntax on
 
 set autowrite
-set wildmenu
-
 set smartindent
+
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+" Look
+
+syntax on
+
+if has('termguicolors')
+  set termguicolors
+  let ayucolor="light"
+  colorscheme ayu
+endif
+
+set wildmenu
+set cursorline
+set title
+
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+" Undo
 
 set undolevels=1000
 
@@ -16,15 +34,11 @@ endif
 set undodir=~/.vim/undo
 set undofile
 
-set title
-
-if executable('rg')
-  set grepprg=rg\ --vimgrep
-endif
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+" Keys
 
 let mapleader = ","
 
-"nnoremap K :vimgrep! "<C-R><C-W>" **/*<CR>
-"nnoremap K :grep! "<C-R><C-W>"<CR>
-nnoremap <C-P> :FZF<CR>
+nnoremap <Leader>f :FZF<CR>
+nnoremap <Leader>r :Rg<CR>
 nnoremap <Leader>h :nohlsearch<CR>

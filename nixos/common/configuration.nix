@@ -51,7 +51,6 @@ in
   environment.systemPackages = with pkgs; [
     linuxPackages.cpupower
     linuxPackages.perf
-    # (all-hies.selection { selector = p: { inherit (p) ghc843 ghc863 ghc864 ghc865; }; })
     # graphical programs
     alacritty
     chromium
@@ -61,6 +60,7 @@ in
     gnome3.gnome-boxes
     gnome3.gnome-tweak-tool
     libreoffice
+    masterPkgs.gnomeExtensions.paperwm
     meld
     mumble
     syncthing

@@ -9,7 +9,12 @@
         configure = {
           customRC = builtins.readFile ./vimrc;
           packages.myNeovimPackage = with pkgs.vimPlugins; {
-            start = [ vim-nix vim-fugitive fzf-vim ];
+            start = [
+              ayu-vim
+              fzf-vim
+              vim-fugitive
+              vim-nix
+            ];
             opt = [];
           };
         };
