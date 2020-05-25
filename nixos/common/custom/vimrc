@@ -2,7 +2,7 @@
 " Basics
 
 set nocompatible
-filetype plugin on
+filetype plugin indent on
 
 set autowrite
 set smartindent

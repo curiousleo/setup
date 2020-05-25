@@ -12,6 +12,7 @@
             start = [
               ayu-vim
               fzf-vim
+              haskell-vim
               vim-fugitive
               vim-nix
             ];
