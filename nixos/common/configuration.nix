@@ -63,6 +63,7 @@ in
     masterPkgs.gnomeExtensions.paperwm
     meld
     mumble
+    shotwell
     syncthing
     transmission-gtk
     virtmanager
