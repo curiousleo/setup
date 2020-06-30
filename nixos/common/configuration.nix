@@ -71,7 +71,6 @@ in
     vscode
     zotero
     # command line programs
-    masterPkgs.zoxide
     bat
     broot
     cabal-install
@@ -100,6 +99,7 @@ in
     imagemagick
     jq
     magic-wormhole
+    masterPkgs.zoxide
     nix-prefetch-git
     #nuspell
     ocrmypdf
