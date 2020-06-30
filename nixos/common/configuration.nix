@@ -89,6 +89,7 @@ in
     gitAndTools.git-imerge
     gnumake
     gnupg
+    google-cloud-sdk
     graphviz
     htop
     hunspell
@@ -98,6 +99,7 @@ in
     hunspellDicts.fr-moderne
     imagemagick
     jq
+    kubectl
     magic-wormhole
     masterPkgs.zoxide
     nix-prefetch-git
