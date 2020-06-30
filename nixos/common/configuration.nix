@@ -59,6 +59,7 @@ in
     gimp
     gnome3.gnome-boxes
     gnome3.gnome-tweak-tool
+    jetbrains.idea-community
     libreoffice
     masterPkgs.gnomeExtensions.paperwm
     meld
@@ -67,6 +68,7 @@ in
     syncthing
     transmission-gtk
     virtmanager
+    vscode
     zotero
     # command line programs
     masterPkgs.zoxide
