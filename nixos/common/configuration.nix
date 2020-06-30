@@ -132,6 +132,9 @@ in
   programs.wireshark.enable = true;
 
   # List services that you want to enable:
+  services.resolved = {
+    enable = true;
+  };
 
   # Enable the OpenSSH daemon.
   # services.openssh.enable = true;
