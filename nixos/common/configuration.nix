@@ -98,14 +98,17 @@ in
     hunspellDicts.en-us-large
     hunspellDicts.fr-moderne
     imagemagick
+    j
     jq
     kubectl
     magic-wormhole
     masterPkgs.zoxide
+    minikube
     nix-prefetch-git
     #nuspell
     ocrmypdf
     opam
+    podman
     proselint
     python3
     restic
@@ -123,6 +126,12 @@ in
     watson
     wget
   ];
+
+  # Use nix-index to find packages for missing commands
+  programs.command-not-found.enable = false;
+  programs.bash.interactiveShellInit = ''
+    source ${pkgs.nix-index}/etc/profile.d/command-not-found.sh
+  '';
 
   # Some programs need SUID wrappers, can be configured further or are
   # started in user sessions.
