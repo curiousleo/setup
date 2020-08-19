@@ -11,6 +11,7 @@
           packages.myNeovimPackage = with pkgs.vimPlugins; {
             start = [
               ayu-vim
+              dhall-vim
               fzf-vim
               haskell-vim
               vim-fugitive
