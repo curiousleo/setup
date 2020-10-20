@@ -8,3 +8,7 @@
 	conflictStyle = diff3
 [include]
 	path = ~/.gitconfig.local
+[alias]
+	co = checkout
+	st = status
+	ff = pull --ff-only
