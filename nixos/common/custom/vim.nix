@@ -16,6 +16,7 @@
               haskell-vim
               vim-fugitive
               vim-nix
+              zig-vim
             ];
             opt = [];
           };
