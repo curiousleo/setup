@@ -59,6 +59,7 @@ export PS1="$PROMPT"
 PATH="${HOME}/.local/bin/:${PATH}"
 
 export FZF_DEFAULT_COMMAND='fd --hidden --type f'
+export BAT_THEME='Monokai Extended Light'
 
 source "${HOME}/.config/broot/launcher/bash/br"
 eval "$(zoxide init bash)"
