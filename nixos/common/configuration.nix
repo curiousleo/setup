@@ -43,6 +43,12 @@ in
     keyMap = "us";
   };
 
+  # Fonts.
+  fonts.fonts = with pkgs; [
+    noto-fonts
+    fira-code
+  ];
+
   # Set your time zone.
   time.timeZone = "Europe/Paris";
 
