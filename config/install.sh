@@ -50,6 +50,17 @@ else
 	exit 1
 fi
 
+# Thunderbird
+readarray -d '' thunderbird_default_profiles < <(
+	find "${HOME}/.thunderbird/" -type d -name '*.default' -print0
+)
+if [ ${#thunderbird_default_profiles[@]} -eq 1 ]; then
+	stow --dir="${owndir}" --target="${thunderbird_default_profiles[0]}" "thunderbird"
+else
+	echo "FAIL: could not find Thunderbird default profile folder"
+	exit 1
+fi
+
 # GNOME
 # - `dconf watch /` shows changes as they happen
 # - `dconf dump /` prints all configuration as a settings file
