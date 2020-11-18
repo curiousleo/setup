@@ -72,6 +72,7 @@ in
     mumble
     shotwell
     syncthing
+    thunderbird
     transmission-gtk
     virtmanager
     vscode
