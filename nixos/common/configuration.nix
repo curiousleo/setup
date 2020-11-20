@@ -192,8 +192,8 @@ in
   hardware.pulseaudio.package = pkgs.pulseaudioFull; # required for bluetooth
   hardware.pulseaudio.extraModules = [ pkgs.pulseaudio-modules-bt ];
 
-  # Enable U2F (for YubiKey).
-  hardware.u2f.enable = true;
+  # Enable U2F (for YubiKey) -- required in 20.03, no longer present in 20.09
+  #hardware.u2f.enable = true;
 
   # Enable Intel microcode updates
   # TODO: this should probably go into a "common hardware configuration for
