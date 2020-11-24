@@ -65,7 +65,11 @@ in
     gimp
     gnome3.gnome-boxes
     gnome3.gnome-tweak-tool
-    jetbrains.idea-community
+    # The Bazel plugin tends not to be up to date with the latest IntelliJ
+    # version [1]. Use a compatible version of "Linux without JBR" [2].
+    # [1] https://plugins.jetbrains.com/plugin/8609-bazel
+    # [2] https://www.jetbrains.com/idea/download/other.html
+    #jetbrains.idea-community
     libreoffice
     masterPkgs.gnomeExtensions.paperwm
     meld
