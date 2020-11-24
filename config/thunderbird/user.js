@@ -4,6 +4,8 @@ user_pref("font.name.serif.x-western", "Noto Serif");
 user_pref("font.size.monospace.x-western", 14);
 
 user_pref("mail.tabs.drawInTitlebar", true);
+// Can't have drawInTitlebar and autoHide, it seems ...
+// user_pref("mail.tabs.autoHide", true);
 user_pref("mail.inline_attachments", false);
 
 user_pref("mailnews.start_page.enabled", false);
