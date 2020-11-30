@@ -16,6 +16,10 @@ in
 
   # Enable virtualisation.
   boot.kernelModules = [ "kvm-amd" "kvm-intel" ];
+  boot.kernel.sysctl = {
+    # For IntelliJ https://confluence.jetbrains.com/x/ioCJAQ.
+    "fs.inotify.max_user_watches" = 1048576;
+  };
 
   # Enable NTFS support (generally, not just for booting).
   boot.supportedFilesystems = [ "ntfs" ];
@@ -69,7 +73,7 @@ in
     # version [1]. Use a compatible version of "Linux without JBR" [2].
     # [1] https://plugins.jetbrains.com/plugin/8609-bazel
     # [2] https://www.jetbrains.com/idea/download/other.html
-    #jetbrains.idea-community
+    masterPkgs.jetbrains.idea-community
     libreoffice
     masterPkgs.gnomeExtensions.paperwm
     meld
