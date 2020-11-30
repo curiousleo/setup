@@ -175,9 +175,6 @@ in
   # Enable CUPS to print documents.
   services.printing.enable = true;
 
-  # Use lorri (nix-shell replacement daemon).
-  services.lorri.enable = true;
-
   # Install DBus packages required for GNOME. See https://nixos.wiki/wiki/Gnome
   services.dbus.packages = with pkgs; [ gnome3.dconf gnome2.GConf ];
 
