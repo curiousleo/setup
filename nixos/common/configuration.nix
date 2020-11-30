@@ -225,7 +225,17 @@ in
     #'';
   };
 
-  nix.extraOptions = "keep-outputs = true";
+  nix.extraOptions = ''
+    keep-outputs = true
+    build-max-jobs = 2
+    binary-caches = https://nix-cache.da-ext.net https://cache.nixos.org
+    binary-cache-public-keys = hydra.da-int.net-1:6Oy2+KYvI7xkAOg0gJisD7Nz/6m8CmyKMbWfSKUe03g= cache.nixos.org-1:6NCHdD59X431o0gWypbMrAURkbJ16ZPMQFGspcDShjY= hydra.nixos.org-1:CNHJZBh9K4tP3EKF6FkkgeVYsS3ohTl+oS0Qa8bezVs=
+    gc-keep-outputs = true
+    gc-keep-derivations = true
+    build-users-group =
+    http2 = false
+  '';
+
   nix.trustedUsers = [ "@wheel" ];
 
   #systemd.services.haskell-language-server = {
