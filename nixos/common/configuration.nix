@@ -49,8 +49,23 @@ in
 
   # Fonts.
   fonts.fonts = with pkgs; [
-    noto-fonts
+    charis-sil
+    doulos-sil
+    eb-garamond
     fira-code
+    inter
+    inter-ui
+    lato
+    libre-baskerville
+    libre-bodoni
+    libre-caslon
+    merriweather
+    merriweather-sans
+    noto-fonts
+    open-dyslexic
+    quattrocento
+    stix-otf
+    xkcd-font
   ];
 
   # Set your time zone.
