@@ -79,6 +79,7 @@ in
     # graphical programs
     alacritty
     chromium
+    darktable
     emacs
     firefox
     gimp
