@@ -207,6 +207,9 @@ in
   # Enable Bluetooth.
   hardware.bluetooth.enable = true;
 
+  # Enable espanso.
+  services.espanso.enable = true;
+
   # Enable sound.
   sound.enable = true;
   hardware.pulseaudio.enable = true;
