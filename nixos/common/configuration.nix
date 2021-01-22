@@ -42,10 +42,10 @@ in
   i18n.defaultLocale = "en_US.UTF-8";
 
   # Console settings.
-  console = {
-    font = lib.mkDefault "${pkgs.terminus_font}/share/consolefonts/ter-u28n.psf.gz";
-    keyMap = "us";
-  };
+  #console = {
+  #  font = lib.mkDefault "${pkgs.terminus_font}/share/consolefonts/ter-u28n.psf.gz";
+  #  keyMap = "us";
+  #};
 
   # Fonts.
   fonts.fonts = with pkgs; [
