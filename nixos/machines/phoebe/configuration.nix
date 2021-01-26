@@ -17,7 +17,16 @@
   networking.interfaces.enp9s0f3u4u2.useDHCP = true;
   networking.interfaces.wlp5s0.useDHCP = true;
 
-  services.xserver.videoDrivers = [ "nvidiaLegacy390" ];
+  # GeForce GT 710: out of nvidiaLegacy390, nvidia and nouveau, nouveau works best.
+  #
+  # $ nix-shell -p pciutils --run 'lspci -k | grep -A 2 -E "(VGA|3D)"'
+  # 07:00.0 VGA compatible controller: NVIDIA Corporation GK208B [GeForce GT 710] (rev a1)
+  #         Subsystem: NVIDIA Corporation Device 118b
+  #         Kernel driver in use: nouveau
+  #
+  # https://nouveau.freedesktop.org/CodeNames.html lists GK208B as NV106 /
+  # GeForce GT 720 under the NVE0 family (Kepler).
+  services.xserver.videoDrivers = [ "nouveau" ];
 
   # Select internationalisation properties.
   # i18n.defaultLocale = "en_US.UTF-8";
