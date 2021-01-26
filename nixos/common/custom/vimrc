@@ -14,7 +14,7 @@ syntax on
 
 if has('termguicolors')
   set termguicolors
-  let ayucolor="light"
+  let ayucolor="dark"
   colorscheme ayu
 endif
 
