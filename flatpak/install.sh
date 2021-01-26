@@ -17,7 +17,6 @@ flatpak --user remote-add --if-not-exists \
 flatpak --user --noninteractive update
 
 flatpak --user --noninteractive install flathub com.bitwarden.desktop
-flatpak --user --noninteractive install flathub com.discordapp.Discord
 flatpak --user --noninteractive install flathub com.skype.Client
 flatpak --user --noninteractive install flathub com.slack.Slack
 flatpak --user --noninteractive install flathub com.spotify.Client
