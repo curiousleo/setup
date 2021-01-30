@@ -26,7 +26,15 @@
   #
   # https://nouveau.freedesktop.org/CodeNames.html lists GK208B as NV106 /
   # GeForce GT 720 under the NVE0 family (Kepler).
-  services.xserver.videoDrivers = [ "nouveau" ];
+  #services.xserver.videoDrivers = [ "nouveau" ];
+
+  # GeForce GTX 1650 Super: nouveau does not work; nvidia works.
+  #
+  # Careful: specifiying "nvidia" here is not enough! The following is also
+  # required (in hardware.nix):
+  #
+  # boot.blacklistedKernelModules = [ "nouveau" ];
+  services.xserver.videoDrivers = [ "nvidia" ];
 
   # Select internationalisation properties.
   # i18n.defaultLocale = "en_US.UTF-8";
