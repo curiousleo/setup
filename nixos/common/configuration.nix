@@ -84,6 +84,9 @@ in
     emacs
     firefox
     gimp
+    #gnome3.gnome-boxes
+    #gnome3.gnome-tweak-tool
+    #gnomeExtensions.paperwm
     # The Bazel plugin tends not to be up to date with the latest IntelliJ
     # version [1]. Use a compatible version of "Linux without JBR" [2].
     # [1] https://plugins.jetbrains.com/plugin/8609-bazel
@@ -244,6 +247,11 @@ in
     # Enable KDE.
     displayManager.sddm.enable = true;
     desktopManager.plasma5.enable = true;
+
+    # Enable the GNOME Desktop Environment.
+    #displayManager.gdm.enable = true;
+    #displayManager.gdm.wayland = false;
+    #desktopManager.gnome3.enable = true;
 
     #monitorSection = ''
     #  DisplaySize 406 228
