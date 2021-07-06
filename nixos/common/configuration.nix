@@ -247,13 +247,22 @@ in
   nix.extraOptions = ''
     keep-outputs = true
     build-max-jobs = 2
-    binary-caches = https://nix-cache.da-ext.net https://cache.nixos.org
-    binary-cache-public-keys = hydra.da-int.net-1:6Oy2+KYvI7xkAOg0gJisD7Nz/6m8CmyKMbWfSKUe03g= cache.nixos.org-1:6NCHdD59X431o0gWypbMrAURkbJ16ZPMQFGspcDShjY= hydra.nixos.org-1:CNHJZBh9K4tP3EKF6FkkgeVYsS3ohTl+oS0Qa8bezVs=
     gc-keep-outputs = true
     gc-keep-derivations = true
     build-users-group =
     http2 = false
   '';
+
+  nix.binaryCachePublicKeys = [
+    "hydra.iohk.io:f/Ea+s+dFdN+3Y/G+FDgSq+a5NEWhJGzdjvKNGv0/EQ="
+    "hydra.da-int.net-1:6Oy2+KYvI7xkAOg0gJisD7Nz/6m8CmyKMbWfSKUe03g="
+    "cache.nixos.org-1:6NCHdD59X431o0gWypbMrAURkbJ16ZPMQFGspcDShjY="
+    "hydra.nixos.org-1:CNHJZBh9K4tP3EKF6FkkgeVYsS3ohTl+oS0Qa8bezVs="
+  ];
+  nix.binaryCaches = [
+    "https://hydra.iohk.io"
+    "https://cache.nixos.org"
+  ];
 
   nix.trustedUsers = [ "@wheel" ];
 
