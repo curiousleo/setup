@@ -122,6 +122,7 @@ in
     gnupg
     google-cloud-sdk
     graphviz
+    host.dnsutils
     htop
     hunspell
     hunspellDicts.de-de
