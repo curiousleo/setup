@@ -235,10 +235,9 @@ in
     # Enable touchpad support.
     libinput.enable = true;
 
-    # Enable the GNOME Desktop Environment.
-    displayManager.gdm.enable = true;
-    displayManager.gdm.wayland = false;
-    desktopManager.gnome3.enable = true;
+    # Enable KDE.
+    displayManager.sddm.enable = true;
+    desktopManager.plasma5.enable = true;
 
     #monitorSection = ''
     #  DisplaySize 406 228
