@@ -46,9 +46,6 @@ disabled = true
 [golang]
 disabled = true
 
-[haskell]
-disabled = true # too slow!
-
 [java]
 disabled = true
 

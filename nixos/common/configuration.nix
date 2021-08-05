@@ -78,28 +78,30 @@ in
     linuxPackages.perf
     # graphical programs
     alacritty
+    ark
     chromium
     darktable
     emacs
     firefox
     gimp
-    gnome3.gnome-boxes
-    gnome3.gnome-tweak-tool
-    gnomeExtensions.paperwm
     # The Bazel plugin tends not to be up to date with the latest IntelliJ
     # version [1]. Use a compatible version of "Linux without JBR" [2].
     # [1] https://plugins.jetbrains.com/plugin/8609-bazel
     # [2] https://www.jetbrains.com/idea/download/other.html
-    masterPkgs.jetbrains.idea-community
+    #masterPkgs.jetbrains.idea-community
+    jetbrains.idea-community
     libreoffice
     meld
     mumble
+    okular
     shotwell
+    standardnotes
     syncthing
     thunderbird
     transmission-gtk
     virtmanager
     vscode
+    xclip
     zotero
     # command line programs
     bat
@@ -137,7 +139,7 @@ in
     minikube
     nix-prefetch-git
     #nuspell
-    ocrmypdf
+    #ocrmypdf
     opam
     podman
     proselint
@@ -198,6 +200,10 @@ in
   # Firmware update DBus service
   # Run fwupdmgr refresh && fwupdmgr get-updates && fwupdmgr update every now and then!
   services.fwupd.enable = true;
+
+  # Standard Notes needs this.
+  # https://github.com/microsoft/vscode-docker/issues/1515#issuecomment-571434211
+  services.gnome.gnome-keyring.enable = true;
 
   # Enable TeamViewer.
   services.teamviewer.enable = true;
@@ -279,7 +285,11 @@ in
   #};
 
   virtualisation.docker.enable = true;
+  environment.variables.DOCKER_BUILDKIT = "1";
+
   virtualisation.libvirtd.enable = true;
+
+  # Compilation takes a long time!
   #virtualisation.virtualbox.host.enable = true;
   #virtualisation.virtualbox.host.enableExtensionPack = true;
 

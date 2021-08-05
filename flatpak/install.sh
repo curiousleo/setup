@@ -21,4 +21,5 @@ flatpak --user --noninteractive install flathub com.skype.Client
 flatpak --user --noninteractive install flathub com.slack.Slack
 flatpak --user --noninteractive install flathub com.spotify.Client
 flatpak --user --noninteractive install flathub com.valvesoftware.Steam
+flatpak --user --noninteractive install flathub org.standardnotes.standardnotes
 flatpak --user --noninteractive install flathub us.zoom.Zoom

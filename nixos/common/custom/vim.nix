@@ -5,7 +5,7 @@
     (
       neovim.override {
         vimAlias = true;
-        withPython = true;
+        withPython3 = true;
         configure = {
           customRC = builtins.readFile ./vimrc;
           packages.myNeovimPackage = with pkgs.vimPlugins; {

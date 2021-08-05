@@ -2,12 +2,13 @@ require('vis')
 
 vis.events.subscribe(vis.events.WIN_OPEN, function(win)
     vis:command('set autoindent')
-    vis:command('set colorcolumn 80')
+    vis:command('set colorcolumn 100')
     vis:command('set cursorline')
     vis:command('set escdelay 0')
     vis:command('set expandtab')
     vis:command('set numbers')
     vis:command('set tabwidth 4')
+    vis:command('set theme acme')
 end)
 
 vis:command_register("fzf", function(argv, force, win, selection, range)
@@ -32,4 +33,14 @@ vis:command_register("fzf", function(argv, force, win, selection, range)
     vis:feedkeys("<vis-redraw>")
 
     return true;
+end)
+
+require('vis-parkour')
+
+-- Requires lfs (lua52Packages.luafilesystem)
+--require('vis-goto-file')
+
+vis_open = require('vis-fzf-open')
+vis.events.subscribe(vis.events.INIT, function()
+    vis:command('map! normal <C-p> :fzf<Enter>')
 end)

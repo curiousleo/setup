@@ -36,6 +36,13 @@
   # boot.blacklistedKernelModules = [ "nouveau" ];
   services.xserver.videoDrivers = [ "nvidia" ];
 
+  hardware.opengl.driSupport32Bit = true;
+  virtualisation.docker.enableNvidia = true;
+
+  # https://github.com/NixOS/nixpkgs/pull/118341#issuecomment-812629390
+  # https://github.com/NVIDIA/nvidia-docker/issues/1447#issuecomment-801479573
+  boot.kernelParams = [ "systemd.unified_cgroup_hierarchy=0" ];
+
   # Select internationalisation properties.
   # i18n.defaultLocale = "en_US.UTF-8";
   # console = {
