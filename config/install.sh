@@ -19,6 +19,7 @@ declare -a configs=(
 	alacritty
 	bash
 	broot
+	direnv
 	git
 	gnupg
 	i3
