@@ -10,6 +10,7 @@ in
   imports = [
     ./cachix.nix
     ./custom/vim.nix
+    ./nix-direnv.nix
   ];
 
   nixpkgs.config.allowUnfree = true;
