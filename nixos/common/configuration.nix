@@ -145,7 +145,6 @@ in
     #nuspell
     #ocrmypdf
     opam
-    podman
     proselint
     python3
     restic
@@ -295,6 +294,12 @@ in
   environment.variables.DOCKER_BUILDKIT = "1";
 
   virtualisation.libvirtd.enable = true;
+
+  virtualisation.podman = {
+    enable = true;
+    #dockerCompat = true;
+    #dockerSocket.enable = true;
+  };
 
   # Compilation takes a long time!
   #virtualisation.virtualbox.host.enable = true;
