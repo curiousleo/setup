@@ -13,9 +13,11 @@
   # Per-interface useDHCP will be mandatory in the future, so this generated config
   # replicates the default behaviour.
   networking.useDHCP = false;
-  networking.interfaces.enp6s0.useDHCP = true;
-  networking.interfaces.enp9s0f3u4u2.useDHCP = true;
-  networking.interfaces.wlp5s0.useDHCP = true;
+  networking.interfaces.enp7s0.useDHCP = true;
+  networking.interfaces.enp10s0f3u3u2.useDHCP = true;
+  #networking.interfaces.enp6s0.useDHCP = true;
+  #networking.interfaces.enp9s0f3u4u2.useDHCP = true;
+  #networking.interfaces.wlp5s0.useDHCP = true;
 
   # GeForce GT 710: out of nvidiaLegacy390, nvidia and nouveau, nouveau works best.
   #
