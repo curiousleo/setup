@@ -65,6 +65,9 @@ in
     noto-fonts
     open-dyslexic
     quattrocento
+    source-code-pro
+    source-sans-pro
+    source-serif-pro
     stix-otf
     xkcd-font
   ];
