@@ -84,6 +84,7 @@ in
     alacritty
     ark
     chromium
+    cryptomator
     darktable
     emacs
     firefox
@@ -213,6 +214,9 @@ in
 
   # Enable TeamViewer.
   services.teamviewer.enable = true;
+
+  # Enable Tailscale.
+  services.tailscale.enable = true;
 
   # Enable PowerTop.
   powerManagement.powertop.enable = true;

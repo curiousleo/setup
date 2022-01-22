@@ -16,8 +16,6 @@
   networking.interfaces.enp0s25.useDHCP = true;
   networking.interfaces.wlp3s0.useDHCP = true;
 
-  hardware.sane.enable = true;
-
   users.mutableUsers = false;
   users.users.leo = {
     isNormalUser = true;
