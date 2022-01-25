@@ -56,7 +56,7 @@ function restore_prompt_after_nix_shell() {
 #PROMPT_COMMAND=restore_prompt_after_nix_shell
 export PS1="$PROMPT"
 
-PATH="${HOME}/.local/bin/:${PATH}"
+export PATH="${HOME}/.local/bin/:${PATH}"
 
 export FZF_DEFAULT_COMMAND='fd --hidden --type f'
 export BAT_THEME='Monokai Extended Light'
